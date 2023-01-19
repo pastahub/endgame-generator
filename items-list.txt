@@ -1,0 +1,37 @@
+gold tools
+iron tools
+diamond tools
+gold ingots
+iron ingots
+shears
+water bucket
+lava bucket
+empty bucket
+fire resistance potion (drink)
+fire resistance potion (splash)
+flint and steel
+boat
+
+ender pearls
+blaze rods
+
+string
+wool
+bed
+glowstone
+crying obsidian
+respawn anchors
+wood planks
+
+obsidian
+nether bricks
+dirt
+leaves
+gravel
+
+crafting table
+
+golden carrot
+bread
+cooked cod
+cooked salmon
