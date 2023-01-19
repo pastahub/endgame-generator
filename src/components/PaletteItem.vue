@@ -23,6 +23,6 @@ function onClick() {
 
 <template>
     <button :class="store.selectedPalette === props.item ? 'slot selected' : 'slot'" @click="onClick">
-        <img :src="'./public/items/' + props.item + '.png'">
+        <img :src="'./items/' + props.item + '.png'">
     </button>
 </template>
