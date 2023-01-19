@@ -29,7 +29,7 @@ function onClick() {
 
 <template>
     <button :class="store.selectedInventory === props.id ? 'slot selected' : 'slot'" @click="onClick">
-        <img v-if="inventory[props.id]" :src="'/src/components/icons/items/' + inventory[props.id].item + '.png'">
+        <img v-if="inventory[props.id]" :src="'./public/items/' + inventory[props.id].item + '.png'">
         <p v-if="inventory[props.id] && inventory[props.id].count !== 1">{{ inventory[props.id].count }}</p>
     </button>
 </template>
