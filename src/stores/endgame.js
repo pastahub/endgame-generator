@@ -8,6 +8,7 @@ export const useEndgameStore = defineStore('endgame', {
             },
             selectedPalette: 'none',
             selectedInventory: 'none',
+            currentCommand: 'none',
         }
     }
 })

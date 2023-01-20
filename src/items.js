@@ -20,6 +20,7 @@ const getItems = () => {
             'dirt',
             'oak_leaves',
             'gravel',
+            'soul_sand',
         ],
         crafting: [
             'crafting_table',

@@ -39,7 +39,19 @@ function generate() {
     
     const command = `give @p command_block{BlockEntityTag:{Command:"${innerCommand}",auto:1b}}`
     navigator.clipboard.writeText(command)
+    store.currentCommand = command
     alert('Command copied to clipboard.')
+}
+
+function clear() {
+    for (const [key, value] of Object.entries(store.inventory)) {
+        if (value) {
+            store.inventory[key] = null
+        }
+    }
+    store.selectedInventory = 'none'
+    store.selectedPalette = 'none'
+    store.currentCommand = 'none'
 }
 </script>
 
@@ -67,6 +79,8 @@ function generate() {
         <Slot id="weapon.offhand"/>
 
         <button class="generate" @click="generate">GENERATE</button>
+
+        <button class="slot" @click="clear"><img src="./icons/delete.png"></button>
 
         <div class="section-gap"></div>
 

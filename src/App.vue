@@ -2,6 +2,7 @@
 //import HelloWorld from './components/HelloWorld.vue'
 import Inventory from './components/Inventory.vue'
 import Palette from './components/Palette.vue'
+import CommandOutput from './components/CommandOutput.vue'
 import { useEndgameStore } from './stores/endgame';
 
 const store = useEndgameStore()
@@ -18,6 +19,7 @@ document.addEventListener('keyup', event => {
 <div class="content">
   <Inventory />
   <Palette />
+  <CommandOutput v-if="store.currentCommand !== 'none'"/>
 </div>
 </template>
 
