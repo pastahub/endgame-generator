@@ -41,6 +41,7 @@ const dragEnd = (e: DragEvent) => {
 }
 
 const onDrop = (e: DragEvent) => {
+    if(e.dataTransfer!.effectAllowed !== "move") return;
     const oldId = e.dataTransfer!.getData("oldId");
 
     if (!!oldId){
@@ -54,10 +55,14 @@ const onDrop = (e: DragEvent) => {
 
     store.selectedInventory = props.id;
 }
+
+const onDragOver = (e: DragEvent) => {
+    if(e.dataTransfer!.effectAllowed === "move") e.preventDefault();
+}
 </script>
 
 <template>
-    <button draggable @dragover.prevent @dragenter.prevent @dragstart=startDrag @dragend=dragEnd @drop=onDrop :class="store.selectedInventory === props.id ? 'slot selected' : 'slot'" @click="onClick">
+    <button draggable @dragover="onDragOver" @dragenter.prevent @dragstart=startDrag @dragend=dragEnd @drop=onDrop :class="store.selectedInventory === props.id ? 'slot selected' : 'slot'" @click="onClick">
         <img v-if="inventory[props.id]" :src="'./items/' + inventory[props.id].item + '.png'">
         <p v-if="inventory[props.id] && inventory[props.id].count !== 1">{{ inventory[props.id].count }}</p>
     </button>
