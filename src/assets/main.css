@@ -41,3 +41,11 @@
 .slot.selected {
   background: white;
 }
+
+.slot > img {
+  user-select: none;
+}
+
+.generate {
+    cursor: pointer;
+}

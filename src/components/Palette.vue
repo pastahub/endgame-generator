@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import PaletteItem from './PaletteItem.vue'
 import getItems from '../items'
 
@@ -9,12 +9,12 @@ console.log(items)
 <template>
     <div class="palette gui-style">
         <h2>Palette</h2>
-        <PaletteItem v-for="item in items.tools" :item="item" />
-        <PaletteItem v-for="item in items.blocks" :item="item" />
-        <PaletteItem v-for="item in items.crafting" :item="item" />
-        <PaletteItem v-for="item in items.explosives" :item="item" />
-        <PaletteItem v-for="item in items.food" :item="item" />
-        <PaletteItem v-for="item in items.armor" :item="item" />
+        <PaletteItem v-for="item in items.tools" :key="item" :item="item" />
+        <PaletteItem v-for="item in items.blocks" :key="item" :item="item" />
+        <PaletteItem v-for="item in items.crafting" :key="item" :item="item" />
+        <PaletteItem v-for="item in items.explosives" :key="item" :item="item" />
+        <PaletteItem v-for="item in items.food" :key="item" :item="item" />
+        <PaletteItem v-for="item in items.armor" :key="item" :item="item" />
     </div>
 </template>
 

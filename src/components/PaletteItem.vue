@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useEndgameStore } from '../stores/endgame';
 
 const props = defineProps(['item'])
@@ -19,10 +19,16 @@ function onClick() {
         }
     }
 }
+
+const startDrag = (e: DragEvent) => {
+    e.dataTransfer!.dropEffect = "move";
+    e.dataTransfer!.effectAllowed = "move";
+    store.selectedPalette = props.item;
+}
 </script>
 
 <template>
-    <button :class="store.selectedPalette === props.item ? 'slot selected' : 'slot'" @click="onClick">
+    <button draggable @dragstart=startDrag @dragend="store.selectedPalette = 'none'" :class="store.selectedPalette === props.item ? 'slot selected' : 'slot'" @click="onClick">
         <img :src="'./items/' + props.item + '.png'">
     </button>
 </template>
