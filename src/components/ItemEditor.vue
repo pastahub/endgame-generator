@@ -47,6 +47,7 @@ const items = getItems();
 
         <button v-if="store.selectedInventory !== 'none' 
             && store.inventory[store.selectedInventory]"
+            style="cursor: pointer;"
             @click="onClick">
             Delete
         </button>

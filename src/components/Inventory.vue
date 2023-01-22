@@ -80,7 +80,7 @@ function clear() {
 
         <button class="generate" @click="generate">GENERATE</button>
 
-        <button class="slot" @click="clear"><img src="./icons/delete.png"></button>
+        <button class="slot" @click="clear" style="cursor: pointer;"><img src="./icons/delete.png"></button>
 
         <div class="section-gap"></div>
 
