@@ -32,6 +32,7 @@
   background: var(--inv-fg);
   padding: 0;
   transition: all .15s ease;
+  user-select: none;
 }
 
 .slot:hover {
@@ -40,10 +41,6 @@
 
 .slot.selected {
   background: white;
-}
-
-.slot > img {
-  user-select: none;
 }
 
 .generate {
