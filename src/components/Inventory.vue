@@ -26,6 +26,7 @@ function generate() {
     commands.push('gamemode survival @a')
     commands.push('execute at @p run fill ~-1 ~-1 ~1 ~2 ~3 ~1 minecraft:obsidian')
     commands.push('execute at @p run fill ~ ~ ~1 ~1 ~2 ~1 minecraft:nether_portal')
+    commands.push('effect give @p minecraft:fire_resistance 120')
     commands.push('setblock ~ ~1 ~ command_block{auto:1,Command:\\"fill ~ ~ ~ ~ ~-3 ~ air\\"}')
     commands.push('kill @e[type=command_block_minecart,distance=..1]')
     let passengers = ''
