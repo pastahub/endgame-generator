@@ -13,6 +13,9 @@ const getItems = () => {
             'bucket',
             'shears',
             'oak_boat',
+            'bow',
+            'crossbow',
+            'arrow',
         ],
         blocks: [
             'obsidian',
